@@ -1,3 +1,5 @@
+import Price from "./price";
+
 async function cartItem() {
   let data = await fetch("https://dummyjson.com/products");
   data = await data.json();
@@ -10,7 +12,11 @@ export default async function Page(){
         <div>
             {
                 product.map(item=>(
-                    <h3>Item Name: {item.title}</h3>
+                    <div>
+                        <h3>Item Name: {item.title}</h3>
+                        <Price money={item.price}/>
+                    </div>
+                    
                 ))
             }
         </div>
