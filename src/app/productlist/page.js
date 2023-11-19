@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react';
+import product from '@/styles/products.module.css'
 
 export default function Page(){
   const [data, setData] = useState([]);
@@ -19,10 +20,10 @@ export default function Page(){
 
   return (
     <div>
-      <h1>Product Data: </h1>
+      <h1>Product Data:</h1>
       {
         data.map(item=>(
-           <h3 key={item.id}>Name: {item.title}, Price: {item.price}</h3>
+           <h3 className={product.main} key={item.id}>Name: {item.title}, Price: {item.price}</h3>
         ))
       }
       {/* {data ? (
