@@ -19,7 +19,7 @@ export default function StudentList() {
       <h1>Student List</h1>
       <ul>
         {myfamily.map((user) => {
-            return (<li>
+            return (<li key={user}>
             <Link href={"/studentlist/" + user}>{user}</Link>
           </li>)
         })}

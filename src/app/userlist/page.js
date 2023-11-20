@@ -19,7 +19,7 @@ export default async function Page() {
       <h1>User List Here:</h1>
       {
         users.map((item)=>(
-            <div>
+            <div key={item.id}>
                 <h2>First Name: {item.firstName}</h2>
             </div>
         ))

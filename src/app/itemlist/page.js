@@ -12,7 +12,7 @@ export default async function Page(){
         <div>
             {
                 product.map(item=>(
-                    <div>
+                    <div key={item.id}>
                         <h3>Item Name: {item.title}</h3>
                         <Price money={item.price}/>
                     </div>
